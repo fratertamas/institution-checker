@@ -1,0 +1,177 @@
+{
+ "dictname": "adokodokszotar_terulet",
+ "rows": [
+  {
+   "kod": "02",
+   "terulet": "Baranya"
+  },
+  {
+   "kod": "22",
+   "terulet": "Baranya"
+  },
+  {
+   "kod": "03",
+   "terulet": "Bács-Kiskun"
+  },
+  {
+   "kod": "23",
+   "terulet": "Bács-Kiskun"
+  },
+  {
+   "kod": "04",
+   "terulet": "Békés"
+  },
+  {
+   "kod": "24",
+   "terulet": "Békés"
+  },
+  {
+   "kod": "05",
+   "terulet": "Borsod-Abaúj-Zemplén"
+  },
+  {
+   "kod": "25",
+   "terulet": "Borsod-Abaúj-Zemplén"
+  },
+  {
+   "kod": "06",
+   "terulet": "Csongrád"
+  },
+  {
+   "kod": "26",
+   "terulet": "Csongrád"
+  },
+  {
+   "kod": "07",
+   "terulet": "Fejér"
+  },
+  {
+   "kod": "27",
+   "terulet": "Fejér"
+  },
+  {
+   "kod": "08",
+   "terulet": "Győr-Moson-Sopron"
+  },
+  {
+   "kod": "28",
+   "terulet": "Győr-Moson-Sopron"
+  },
+  {
+   "kod": "09",
+   "terulet": "Hajdú-Bihar"
+  },
+  {
+   "kod": "29",
+   "terulet": "Hajdú-Bihar"
+  },
+  {
+   "kod": "10",
+   "terulet": "Heves"
+  },
+  {
+   "kod": "30",
+   "terulet": "Heves"
+  },
+  {
+   "kod": "11",
+   "terulet": "Komárom-Esztergom"
+  },
+  {
+   "kod": "31",
+   "terulet": "Komárom-Esztergom"
+  },
+  {
+   "kod": "12",
+   "terulet": "Nógrád"
+  },
+  {
+   "kod": "32",
+   "terulet": "Nógrád"
+  },
+  {
+   "kod": "13",
+   "terulet": "Pest"
+  },
+  {
+   "kod": "33",
+   "terulet": "Pest"
+  },
+  {
+   "kod": "14",
+   "terulet": "Somogy"
+  },
+  {
+   "kod": "34",
+   "terulet": "Somogy"
+  },
+  {
+   "kod": "15",
+   "terulet": "Szabolcs-Szatmár-Bereg"
+  },
+  {
+   "kod": "35",
+   "terulet": "Szabolcs-Szatmár-Bereg"
+  },
+  {
+   "kod": "16",
+   "terulet": "Jász-Nagykun-Szolnok"
+  },
+  {
+   "kod": "36",
+   "terulet": "Jász-Nagykun-Szolnok"
+  },
+  {
+   "kod": "17",
+   "terulet": "Tolna"
+  },
+  {
+   "kod": "37",
+   "terulet": "Tolna"
+  },
+  {
+   "kod": "18",
+   "terulet": "Vas"
+  },
+  {
+   "kod": "38",
+   "terulet": "Vas"
+  },
+  {
+   "kod": "19",
+   "terulet": "Veszprém"
+  },
+  {
+   "kod": "39",
+   "terulet": "Veszprém"
+  },
+  {
+   "kod": "20",
+   "terulet": "Zala"
+  },
+  {
+   "kod": "40",
+   "terulet": "Zala"
+  },
+  {
+   "kod": "41",
+   "terulet": "Észak-Budapest"
+  },
+  {
+   "kod": "42",
+   "terulet": "Kelet-Budapest"
+  },
+  {
+   "kod": "43",
+   "terulet": "Dél-Budapest"
+  },
+  {
+   "kod": "44",
+   "terulet": "Kiemelt Adózók Adóigazgatósága"
+  },
+  {
+   "kod": "51",
+   "terulet": "Kiemelt Ügyek Adóigazgatósága"
+  }
+ ]
+}
