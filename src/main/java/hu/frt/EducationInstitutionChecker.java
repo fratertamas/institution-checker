@@ -1,7 +1,5 @@
 package hu.frt;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -106,7 +104,6 @@ public class EducationInstitutionChecker {
             throw new RuntimeException(e);
         }
     }
-
 
     private boolean isOkTaxBase(String taxBase) {
         int number1 = Integer.parseInt(taxBase.substring(0,1));
