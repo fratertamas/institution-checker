@@ -2,7 +2,6 @@ package hu.frt;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import hu.frt.model.CodeOfTaxNumberArea;
@@ -88,9 +87,8 @@ public class EducationInstitutionCheckerController {
         return "";
     }
 
-    private boolean codeOfArea(String codeOfArea) {
+    protected boolean codeOfArea(String codeOfArea) {
         ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         try {
             CodeOfTaxNumberArea readValue = mapper.readValue(EducationInstitutionCheckerController.class.getResourceAsStream("/sourceFile/adokodokszotar_terulet.json"), CodeOfTaxNumberArea.class);
             boolean isFound = false;
