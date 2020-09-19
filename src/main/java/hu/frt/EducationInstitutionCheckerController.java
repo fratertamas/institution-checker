@@ -20,6 +20,30 @@ import java.util.List;
 @RestController
 public class EducationInstitutionCheckerController {
     @ApiOperation(value = "Oktatási intézmén adatainak elenőrzése")
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "contents",
+                    dataTypeClass = EducationalInstitution.class,
+                    examples = @io.swagger.annotations.Example(
+                            value = {
+                                    @ExampleProperty(value = "{\n" +
+                                            "  \"headOfInstitutionData\": {\n" +
+                                            "    \"firstName\": \"Kiss\",\n" +
+                                            "    \"phoneNumber\": \"06203920511\",\n" +
+                                            "    \"surname\": \"Balázs\"\n" +
+                                            "  },\n" +
+                                            "  \"institutionData\": {\n" +
+                                            "    \"name\": \"Piroska Ovi\",\n" +
+                                            "    \"numberOfTaskLocation\": 10,\n" +
+                                            "    \"omIdentificationNumber\": \"101101\",\n" +
+                                            "    \"status\": \"aktív\",\n" +
+                                            "    \"taxNumber\": \"18299425-1-43\",\n" +
+                                            "    \"type\": \"óvoda\"\n" +
+                                            "  }\n" +
+                                            "}", mediaType = "application/json")
+                            })
+            )
+    })
     @PostMapping("institution-check")
     public String checker(@RequestBody EducationalInstitution educationalInstitution){
         String errors = "";
