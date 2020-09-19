@@ -1,7 +1,8 @@
-package hu.frt;
+package hu.frt.model;
 
 public class TaxNumberArea {
     private String kod;
+    private String terulet;
 
     public String getKod() {
         return kod;
@@ -18,6 +19,4 @@ public class TaxNumberArea {
     public void setTerulet(String terulet) {
         this.terulet = terulet;
     }
-
-    private String terulet;
 }

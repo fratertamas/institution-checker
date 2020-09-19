@@ -5,6 +5,8 @@ import java.io.IOException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import hu.frt.model.CodeOfTaxNumberArea;
+import hu.frt.model.TaxNumberArea;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class EducationInstitutionChecker {
+public class EducationInstitutionCheckerController {
     @PostMapping("institution-check")
     public String checker(@RequestBody EducationalInstitution educationalInstitution){
         String errors = "";
@@ -90,7 +92,7 @@ public class EducationInstitutionChecker {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         try {
-            CodeOfTaxNumberArea readValue = mapper.readValue(EducationInstitutionChecker.class.getResourceAsStream("/sourceFile/adokodokszotar_terulet.json"), CodeOfTaxNumberArea.class);
+            CodeOfTaxNumberArea readValue = mapper.readValue(EducationInstitutionCheckerController.class.getResourceAsStream("/sourceFile/adokodokszotar_terulet.json"), CodeOfTaxNumberArea.class);
             boolean isFound = false;
             for (TaxNumberArea code: readValue.getRows()
             ) {

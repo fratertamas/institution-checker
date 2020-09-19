@@ -1,4 +1,4 @@
-package hu.frt;
+package hu.frt.model;
 
 import java.util.List;
 
