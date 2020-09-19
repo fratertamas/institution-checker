@@ -6,6 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import hu.frt.model.CodeOfTaxNumberArea;
 import hu.frt.model.TaxNumberArea;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ExampleProperty;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +19,7 @@ import java.util.List;
 
 @RestController
 public class EducationInstitutionCheckerController {
+    @ApiOperation(value = "Oktatási intézmén adatainak elenőrzése")
     @PostMapping("institution-check")
     public String checker(@RequestBody EducationalInstitution educationalInstitution){
         String errors = "";
