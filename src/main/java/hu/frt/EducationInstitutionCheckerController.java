@@ -19,7 +19,7 @@ import java.util.List;
 
 @RestController
 public class EducationInstitutionCheckerController {
-    @ApiOperation(value = "Oktatási intézmén adatainak elenőrzése")
+    @ApiOperation(value = "Oktatási intézmény adatainak ellenőrzése")
     @ApiImplicitParams({
             @ApiImplicitParam(
                     name = "contents",
