@@ -1,46 +1,54 @@
 package hu.frt;
 
-public class HeadOfInstitutionDataChecker {
+import java.util.ArrayList;
+import java.util.List;
 
+public class HeadOfInstitutionDataChecker {
     private EducationalInstitution educationalInstitution;
 
     public HeadOfInstitutionDataChecker(EducationalInstitution educationalInstitution) {
         this.educationalInstitution = educationalInstitution;
     }
 
-    public String getErrors() {
+    public List<Integer> getErrors() {
         return checkHeadOfInstitutionData(educationalInstitution);
     }
 
-    private String checkHeadOfInstitutionData(EducationalInstitution educationalInstitution) {
-        String errorMessage = "";
+    private List<Integer> checkHeadOfInstitutionData(EducationalInstitution educationalInstitution) {
+        List<Integer> errors = new ArrayList<>();
         String partOfName = "vezetéknév";
-        errorMessage += checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getSurname(), partOfName);
-
+        errors.add(checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getSurname(), partOfName));
         partOfName = "keresztnév";
-        errorMessage += checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getFirstName(), partOfName);
+        errors.add(checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getFirstName(), partOfName));
+        errors.add(checkLeaderPhoneNumber(educationalInstitution.getHeadOfInstitutionData().getPhoneNumber()));
 
-        errorMessage += checkLeaderPhoneNumber(educationalInstitution.getHeadOfInstitutionData().getPhoneNumber());
-
-        return errorMessage;
+        return errors;
     }
 
-    private String checkLeaderPhoneNumber(String phoneNumber) {
+    private int checkLeaderPhoneNumber(String phoneNumber) {
         String pattern = "^([03]6)((20|30|31|70|1)(\\d{7})|(2[2-9]|3[2-7]|4[024-9]|5[234679]|6[23689]|7[2-9]|8[02-9]|9[92-69])(\\d{6}))$";
 
         if (!phoneNumber.matches(pattern))
-            return "Kérem ellenőrizze a megadott telefonszámot!\r\n";
+            return 15;
 
-        return "";
+        return 0;
     }
 
-    private String checkLeaderSurnameAndFirstName(String surname, String partOfName) {
-        if (surname.isEmpty())
-            return "A "+partOfName+" nem lehet üres!\r\n";
+    protected int checkLeaderSurnameAndFirstName(String name, String partOfName) {
+        if (name.isEmpty()) {
+            if (partOfName == "vezetéknév")
+                return 11;
+            else
+                return 13;
+        }
 
-        if (surname.length() > 50)
-            return "A "+partOfName+" nem lehet 50 karakternél több!\r\n";
+        if (name.length() > 50) {
+            if (partOfName == "vezetéknév")
+                return 12;
+            else
+                return 14;
+        }
 
-        return "";
+        return 0;
     }
 }
