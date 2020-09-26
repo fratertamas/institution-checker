@@ -16,10 +16,8 @@ public class HeadOfInstitutionDataChecker {
 
     private List<Integer> checkHeadOfInstitutionData(EducationalInstitution educationalInstitution) {
         List<Integer> errors = new ArrayList<>();
-        String partOfName = "vezetéknév";
-        errors.add(checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getSurname(), partOfName));
-        partOfName = "keresztnév";
-        errors.add(checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getFirstName(), partOfName));
+        errors.add(checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getSurname(), "vezetéknév"));
+        errors.add(checkLeaderSurnameAndFirstName(educationalInstitution.getHeadOfInstitutionData().getFirstName(), "keresztnév"));
         errors.add(checkLeaderPhoneNumber(educationalInstitution.getHeadOfInstitutionData().getPhoneNumber()));
 
         return errors;
@@ -36,14 +34,14 @@ public class HeadOfInstitutionDataChecker {
 
     protected int checkLeaderSurnameAndFirstName(String name, String partOfName) {
         if (name.isEmpty()) {
-            if (partOfName == "vezetéknév")
+            if (partOfName.equals("vezetéknév"))
                 return 11;
             else
                 return 13;
         }
 
         if (name.length() > 50) {
-            if (partOfName == "vezetéknév")
+            if (partOfName.equals("vezetéknév"))
                 return 12;
             else
                 return 14;

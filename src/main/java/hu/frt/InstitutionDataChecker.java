@@ -57,7 +57,7 @@ public class InstitutionDataChecker {
     }
 
     private int checkInstitutionType(String type) {
-        List<String> types = new ArrayList<String>();
+        List<String> types = new ArrayList<>();
         types.add("ÓVODA");
         types.add("ÁLTALÁNOS ISKOLA");
         types.add("KÖZÉPISKOLA");
