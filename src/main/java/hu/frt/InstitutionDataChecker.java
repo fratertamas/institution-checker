@@ -67,7 +67,7 @@ public class InstitutionDataChecker {
         return 0;
     }
 
-    private int checkInstitutionName(String name) {
+    protected int checkInstitutionName(String name) {
         if (name.length() < 5)
             return 2;
 

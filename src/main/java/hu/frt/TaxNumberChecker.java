@@ -40,7 +40,7 @@ public class TaxNumberChecker{
         }
     }
 
-    private boolean isOkTaxBase(String taxBase) {
+    protected boolean isOkTaxBase(String taxBase) {
         int number1 = Integer.parseInt(taxBase.substring(0,1));
         int number2 = Integer.parseInt(taxBase.substring(1,2));
         int number3 = Integer.parseInt(taxBase.substring(2,3));

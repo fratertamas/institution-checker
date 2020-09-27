@@ -23,7 +23,7 @@ public class HeadOfInstitutionDataChecker {
         return errors;
     }
 
-    private int checkLeaderPhoneNumber(String phoneNumber) {
+    protected int checkLeaderPhoneNumber(String phoneNumber) {
         String pattern = "^([03]6)((20|30|31|70|1)(\\d{7})|(2[2-9]|3[2-7]|4[024-9]|5[234679]|6[23689]|7[2-9]|8[02-9]|9[92-69])(\\d{6}))$";
 
         if (!phoneNumber.matches(pattern))
